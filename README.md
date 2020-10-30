@@ -19,7 +19,7 @@ pod install
 
 ## サンプル集
 | No | App名 | 説明 |
-| :-- | :-: | --: |
+| :--: | :- | :-- |
 | 1 | sampleApp1 | hello, world |
 
 ## VSCode拡張機能
