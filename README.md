@@ -1,6 +1,6 @@
 # react-native_samples
 
-## VS拡張機能
+## VSCode拡張機能
 - Material Icon Theme
 - Path Autocomplete
 - Path Intellisense
