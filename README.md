@@ -43,7 +43,8 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | :--: | :- | :-- |
 | 1 | sampleApp01 | hello, world |
 | 2 | sampleApp02 | TextInputとTextでstateの変化を検知 |
-| 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成 |
+| 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて |
+| 4 | sampleApp04 | 親コンポーネントで定義したstateを子コンポーネントで変動させる |
 
 
 ## VSCode拡張機能
