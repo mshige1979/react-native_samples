@@ -25,6 +25,14 @@ const App = () => {
       <View
         style={{
           width: '100%',
+          backgroundColor: 'green',
+        }}>
+        <Text style={[styles.text]}>表示する値2：</Text>
+        <Text style={[styles.text, styles.output]}>{text}</Text>
+      </View>
+      <View
+        style={{
+          width: '100%',
           backgroundColor: 'red',
         }}>
         <Text style={[styles.text]}>入力する値：</Text>
