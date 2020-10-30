@@ -47,18 +47,19 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 4 | sampleApp04 | (未作成)親コンポーネントで定義したstateを子コンポーネントで変動させる |
 | 5 | sampleApp05 | (未作成)子要素の出力するコンポーネントを作成 |
 | 6 | sampleApp06 | (未作成)useEffectを利用した副作用フック |
-| 7 | sampleApp06 | (未作成)AsyncStorageの動作確認|
-| 8 | sampleApp06 | (未作成)リスト出力|
-| 9 | sampleApp06 | (未作成)axiosを利用してAPIと通信|
-| 10 | sampleApp06 | (未作成)React Navigation(Stack)|
-| 11 | sampleApp06 | (未作成)React Navigation(Tab)|
-| 12 | sampleApp06 | (未作成)React Navigation(Tab+Stack)|
-| 13 | sampleApp06 | (未作成)React Navigation(Drawer)|
-| 14 | sampleApp06 | (未作成)React Navigation(Tab+Stack+Drawer)|
-| 15 | sampleApp06 | (未作成)Google maps|
-| 16 | sampleApp06 | (未作成)Google maps(marker v1)|
-| 17 | sampleApp06 | (未作成)Google maps(marker v2)|
-| 18 | sampleApp06 | (未作成)react-native-snap-carousel|
+| 7 | sampleApp07 | (未作成)AsyncStorageの動作確認|
+| 8 | sampleApp08 | (未作成)リスト出力|
+| 9 | sampleApp09 | (未作成)axiosを利用してAPIと通信|
+| 10 | sampleApp10 | (未作成)React Navigation(Stack)|
+| 11 | sampleApp11 | (未作成)React Navigation(Tab)|
+| 12 | sampleApp12 | (未作成)React Navigation(Tab+Stack)|
+| 13 | sampleApp13 | (未作成)React Navigation(Drawer)|
+| 14 | sampleApp14 | (未作成)React Navigation(Tab+Stack+Drawer)|
+| 15 | sampleApp15 | (未作成)Google maps|
+| 16 | sampleApp16 | (未作成)Google maps(marker v1)|
+| 17 | sampleApp17 | (未作成)Google maps(marker v2)|
+| 18 | sampleApp18 | (未作成)react-native-snap-carousel|
+| 19 | sampleApp19 | (未作成)スマホの向きを固定|
 
 
 ## VSCode拡張機能
