@@ -17,6 +17,18 @@ cd ios
 pod install
 ```
 
+## 起動方法
+### android
+ターミナルで以下を実行
+
+```
+npx react-native run-android
+```
+
+### ios
+cd ios
+
+
 ## サンプル集
 | No | App名 | 説明 |
 | :--: | :- | :-- |
