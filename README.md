@@ -34,6 +34,7 @@ npx react-native run-ios
 ```
 cd ios
 pod install
+Bundle Idenifierにdeveloperアカウントを選択（apple developer account必須）
 プロジェクト名.xcworkspaceを開き、実機を選択して実行
 ```
 
