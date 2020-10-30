@@ -20,14 +20,22 @@ pod install
 ## 起動方法
 ### android
 ターミナルで以下を実行
-
 ```
 npx react-native run-android
 ```
+※エミュレータは起動指定れば良い、実機はUSBデバッグ状態でusbに接続していればOK
 
 ### ios
+#### シミュレータ用
+```
+npx react-native run-ios
+```
+#### 実機
+```
 cd ios
-
+pod install
+プロジェクト名.xcworkspaceを開き、実機を選択して実行
+```
 
 ## サンプル集
 | No | App名 | 説明 |
