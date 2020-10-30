@@ -32,7 +32,9 @@ cd ios
 ## サンプル集
 | No | App名 | 説明 |
 | :--: | :- | :-- |
-| 1 | sampleApp1 | hello, world |
+| 1 | sampleApp01 | hello, world |
+| 2 | sampleApp02 | TextInputとTextでstateの変化を検知 |
+
 
 ## VSCode拡張機能
 - Material Icon Theme
