@@ -34,6 +34,7 @@ cd ios
 | :--: | :- | :-- |
 | 1 | sampleApp01 | hello, world |
 | 2 | sampleApp02 | TextInputとTextでstateの変化を検知 |
+| 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成 |
 
 
 ## VSCode拡張機能
