@@ -72,7 +72,7 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 13 | sampleLib13 | (未作成)react-native-snap-carousel|
 | 14 | sampleLib14 | (未作成)スマホの向きを固定|
 
-## サンプル集
+## デモアプリ集
 | No | App名 | 説明 |
 | :--: | :- | :-- |
 | 1 | sampleDemo01 | (未作成)TODOリストアプリ|
