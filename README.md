@@ -44,7 +44,7 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 1 | sampleApp01 | hello, world |
 | 2 | sampleApp02 | TextInputとTextでstateの変化を検知 |
 | 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて |
-| 4 | sampleApp04 | (未作成)親コンポーネントで定義したstateを子コンポーネントで変動させる |
+| 4 | sampleApp04 | 親コンポーネントで定義したstateを子コンポーネントで変動させる |
 | 5 | sampleApp05 | (未作成)子要素の出力するコンポーネントを作成 |
 | 6 | sampleApp06 | (未作成)useEffectを利用した副作用フック |
 | 7 | sampleApp07 | (未作成)リスト出力|
