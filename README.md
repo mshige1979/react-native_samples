@@ -46,13 +46,15 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて |
 | 4 | sampleApp04 | 親コンポーネントで定義したstateを子コンポーネントで変動させる |
 | 5 | sampleApp05 | (未作成)子要素を設定できるコンポーネントを作成 |
-| 6 | sampleApp06 | (未作成)useEffectを利用した副作用フック |
-| 7 | sampleApp07 | (未作成)リスト出力|
+| 6 | sampleApp06 | (未作成)ViewやTextコンポーネントを組み合わせてリスト出力|
+| 7 | sampleApp07 | (未作成)FlatList出力|
 | 8 | sampleApp08 | (未作成)縦スクロール|
 | 9 | sampleApp09 | (未作成)横スクロール|
-| 10 | sampleApp10 | (未作成)contextAPI|
-| 11 | sampleApp11 | (未作成)スプラッシュ画面|
-| 12 | sampleApp12 | (未作成)ログイン画面|
+| 10 | sampleApp10 | (未作成)FlatList横スクロール|
+| 11 | sampleApp11 | (未作成)contextAPI|
+| 12 | sampleApp12 | (未作成)react-navigationによる簡易画面遷移|
+| 13 | sampleApp13 | (未作成)ログイン画面|
+| 14 | sampleApp14 | (未作成)スプラッシュ画面|
 
 ## 外部ライブラリ関連
 | No | App名 | 説明 |
