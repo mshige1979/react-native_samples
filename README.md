@@ -48,8 +48,8 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 5 | sampleApp05 | (未作成)子要素を設定できるコンポーネントを作成 |
 | 6 | sampleApp06 | (未作成)ViewやTextコンポーネントを組み合わせてリスト出力|
 | 7 | sampleApp07 | (未作成)FlatList出力|
-| 8 | sampleApp08 | (未作成)縦スクロール|
-| 9 | sampleApp09 | (未作成)横スクロール|
+| 8 | sampleApp08 | (未作成)ScrollView縦スクロール|
+| 9 | sampleApp09 | (未作成)ScrollView横スクロール|
 | 10 | sampleApp10 | (未作成)FlatList横スクロール|
 | 11 | sampleApp11 | (未作成)contextAPI|
 | 12 | sampleApp12 | (未作成)react-navigationによる簡易画面遷移|
