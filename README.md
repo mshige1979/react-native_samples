@@ -59,9 +59,19 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 16 | sampleApp16 | (未作成)Google maps|
 | 17 | sampleApp17 | (未作成)Google maps(marker v1)|
 | 18 | sampleApp18 | (未作成)Google maps(marker v2)独自マーカー作成|
-| 19 | sampleApp18 | (未作成)Google maps(marker v3)独自吹き出し作成|
-| 20 | sampleApp19 | (未作成)react-native-snap-carousel|
-| 21 | sampleApp20 | (未作成)スマホの向きを固定|
+| 19 | sampleApp19 | (未作成)Google maps(marker v3)独自吹き出し作成|
+| 20 | sampleApp20 | (未作成)react-native-snap-carousel|
+| 21 | sampleApp21 | (未作成)スマホの向きを固定|
+| 22 | sampleApp22 | (未作成)スプラッシュ画面|
+| 23 | sampleApp23 | (未作成)ログイン画面|
+
+## サンプル集
+| No | App名 | 説明 |
+| :--: | :- | :-- |
+| 1 | demoApp01 | (未作成)TODOリストアプリ|
+| 2 | demoApp02 | (未作成)天気予報アプリ|
+| 3 | demoApp03 | (未作成)ニュースアプリ|
+
 
 
 ## VSCode拡張機能
