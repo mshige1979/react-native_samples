@@ -88,3 +88,5 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 - Prettier - Code formatter
 - React Native Snippet
 - Japanese Language Pack for Visual Studio Code
+
+ssss
