@@ -39,22 +39,22 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 ```
 
 ## サンプル集
-| No | App名 | 説明 |
-| :--: | :- | :-- |
-| 1 | sampleApp01 | hello, world |
-| 2 | sampleApp02 | TextInputとTextでstateの変化を検知 |
-| 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて |
-| 4 | sampleApp04 | 親コンポーネントで定義したstateを子コンポーネントで変動させる |
-| 5 | sampleApp05 | 子要素を設定できるコンポーネントを作成 |
-| 6 | sampleApp06 | (未作成)ViewやTextコンポーネントを組み合わせてリスト出力|
-| 7 | sampleApp07 | (未作成)FlatList出力|
-| 8 | sampleApp08 | (未作成)ScrollView縦スクロール|
-| 9 | sampleApp09 | (未作成)ScrollView横スクロール|
-| 10 | sampleApp10 | (未作成)FlatList横スクロール|
-| 11 | sampleApp11 | (未作成)contextAPI|
-| 12 | sampleApp12 | (未作成)react-navigationによる簡易画面遷移|
-| 13 | sampleApp13 | (未作成)ログイン画面|
-| 14 | sampleApp14 | (未作成)スプラッシュ画面|
+| No | App名 | 説明 | 作成 | 
+| :--: | :- | :-- | :--: 
+| 1 | sampleApp01 | hello, world | OK | 
+| 2 | sampleApp02 | TextInputとTextでstateの変化を検知 | OK |
+| 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて | OK |
+| 4 | sampleApp04 | 親コンポーネントで定義したstateを子コンポーネントで変動させる | OK |
+| 5 | sampleApp05 | 子要素を設定できるコンポーネントを作成 | OK |
+| 6 | sampleApp06 | ViewやTextコンポーネントを組み合わせてリスト出力| OK |
+| 7 | sampleApp07 | (未作成)FlatList出力| |
+| 8 | sampleApp08 | (未作成)ScrollView縦スクロール| |
+| 9 | sampleApp09 | (未作成)ScrollView横スクロール| |
+| 10 | sampleApp10 | (未作成)FlatList横スクロール| |
+| 11 | sampleApp11 | (未作成)contextAPI| |
+| 12 | sampleApp12 | (未作成)react-navigationによる簡易画面遷移| |
+| 13 | sampleApp13 | (未作成)ログイン画面| |
+| 14 | sampleApp14 | (未作成)スプラッシュ画面| |
 
 ## 外部ライブラリ関連
 | No | App名 | 説明 |
