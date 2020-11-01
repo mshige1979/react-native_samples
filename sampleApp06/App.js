@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -43,9 +43,9 @@ const App = () => {
   return (
     <KeyboardAvoidingView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        {cardList.map((card) => {
+        {cardList.map((card, index) => {
           return (
-            <View style={styles.box}>
+            <View style={styles.box} key={index}>
               <View style={styles.nameAndTime}>
                 <Text style={styles.name}>{card.name}</Text>
                 <Text style={styles.time}>{card.time}</Text>
@@ -69,7 +69,7 @@ const App = () => {
   );
 };
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     shadowColor: 'black',
     shadowOpacity: 0.4,
-    shadowOffset: {width: 3, height: 3},
+    shadowOffset: { width: 3, height: 3 },
     marginBottom: 10,
   },
   nameAndTime: {
