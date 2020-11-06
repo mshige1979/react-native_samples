@@ -40,3 +40,22 @@
           />
 
 ```
+
+## refについて
+設定することで参照情報を保持できるため、ボタン押下などでスクロールバーの位置を変えたりすることができる
+### 準備としてuseRefを設定
+```
+  const _scrollViewRef = useRef(null);
+  const _flatListRef = useRef(null);
+```
+
+### コンポーネントへ設定
+```
+<ScrollView horizontal={true} ref={_scrollViewRef}>
+```
+
+### アクセス
+```
+// スクロール最左端へ移動
+_scrollViewRef.current.scrollTo({y: 0});
+```
