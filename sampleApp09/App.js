@@ -40,6 +40,9 @@ const App = () => {
     return () => {
       console.log('aaaaa');
     };
+
+    //
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const btn = () => {
