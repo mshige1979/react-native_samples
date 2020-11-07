@@ -12,11 +12,16 @@ const DrawerScreen = () => {
         name="TopTabsScreen"
         component={TopTabsScreen}
         listeners={({navigation, route}) => ({
-          drawerClose: () => {
+          drawerClose: (e) => {
             console.log('bbbb');
+            console.log(route);
+            console.log(e);
             navigation.navigate('Home');
           },
         })}
+        onPress={() => {
+          console.log('aaaa');
+        }}
       />
       <Drawer.Screen name="Page5" component={Page5} />
     </Drawer.Navigator>
