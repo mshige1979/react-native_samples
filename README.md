@@ -41,7 +41,7 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 ## サンプル集
 | No | App名 | 説明 | 作成 | 
 | :--: | :- | :-- | :--: 
-| 1 | sampleApp01 | hello, world | OK | 
+| 1 | [sampleApp01](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp01) | hello, world | OK | 
 | 2 | sampleApp02 | TextInputとTextでstateの変化を検知 | OK |
 | 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて | OK |
 | 4 | sampleApp04 | 親コンポーネントで定義したstateを子コンポーネントで変動させる | OK |
