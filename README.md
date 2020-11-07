@@ -49,7 +49,7 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 6 | sampleApp06 | ViewやTextコンポーネントを組み合わせてリスト出力| OK |
 | 7 | sampleApp07 | FlatList出力| OK |
 | 8 | sampleApp08 | ScrollView縦スクロール| OK |
-| 9 | sampleApp09 | ScrollView、　FlatList横スクロール| |
+| 9 | sampleApp09 | ScrollView、　FlatList横スクロール| OK |
 | 10 | sampleApp11 | (未作成)contextAPI| |
 | 11 | sampleApp12 | (未作成)react-navigationによる簡易画面遷移| |
 | 12 | sampleApp13 | (未作成)ログイン画面| |
