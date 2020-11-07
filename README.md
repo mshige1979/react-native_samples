@@ -42,18 +42,18 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | No | App名 | 説明 | 作成 | 
 | :--: | :- | :-- | :--: 
 | 1 | [sampleApp01](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp01) | hello, world | OK | 
-| 2 | sampleApp02 | TextInputとTextでstateの変化を検知 | OK |
-| 3 | sampleApp03 | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて | OK |
-| 4 | sampleApp04 | 親コンポーネントで定義したstateを子コンポーネントで変動させる | OK |
-| 5 | sampleApp05 | 子要素を設定できるコンポーネントを作成 | OK |
-| 6 | sampleApp06 | ViewやTextコンポーネントを組み合わせてリスト出力| OK |
-| 7 | sampleApp07 | FlatList出力| OK |
-| 8 | sampleApp08 | ScrollView縦スクロール| OK |
-| 9 | sampleApp09 | ScrollView、　FlatList横スクロール| OK |
-| 10 | sampleApp10 | contextAPI| OK |
-| 11 | sampleApp12 | (未作成)react-navigationによる簡易画面遷移| |
-| 12 | sampleApp13 | (未作成)ログイン画面| |
-| 13 | sampleApp14 | (未作成)スプラッシュ画面| |
+| 2 | [sampleApp02](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp02) | TextInputとTextでstateの変化を検知 | OK |
+| 3 | [sampleApp03](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp03) | ViewやTextを組み合わせて１つのコンポーネントを作成あとpropsについて | OK |
+| 4 | [sampleApp04](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp04) | 親コンポーネントで定義したstateを子コンポーネントで変動させる | OK |
+| 5 | [sampleApp05](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp05) | 子要素を設定できるコンポーネントを作成 | OK |
+| 6 | [sampleApp06](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp06) | ViewやTextコンポーネントを組み合わせてリスト出力| OK |
+| 7 | [sampleApp07](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp07) | FlatList出力| OK |
+| 8 | [sampleApp08](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp08) | ScrollView縦スクロール| OK |
+| 9 | [sampleApp09](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp09) | ScrollView、　FlatList横スクロール| OK |
+| 10 | [sampleApp10](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp10) | contextAPI| OK |
+| 11 | sampleApp11 | (未作成)react-navigationによる簡易画面遷移| |
+| 12 | sampleApp12 | (未作成)ログイン画面| |
+| 13 | sampleApp13 | (未作成)スプラッシュ画面| |
 
 ## 外部ライブラリ関連
 | No | App名 | 説明 |
