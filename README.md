@@ -52,8 +52,9 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 9 | [sampleApp09](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp09) | ScrollView、　FlatList横スクロール| OK |
 | 10 | [sampleApp10](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp10) | contextAPI| OK |
 | 11 | [sampleApp11](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp11) | react-navigationによる簡易画面遷移| OK |
-| 12 | [sampleApp12](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp12) | ログイン画面| OK |
-| 13 | sampleApp13 | (未作成)スプラッシュ画面| |
+| 12 | [sampleApp12](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp12) | ログイン画面 | OK |
+| 13 | [sampleApp13](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp13) | 画面引っぱってロードするやつ | OK |
+| - | sampleAppNN | (未作成)スプラッシュ画面| |
 
 ## 外部ライブラリ関連
 | No | App名 | 説明 |
