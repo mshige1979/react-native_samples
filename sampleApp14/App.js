@@ -44,37 +44,37 @@ const App = () => {
           animationType="slide"
           transparent={true}
           visible={modalVisible}
-          onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
-          }}>
+          //onRequestClose={() => {
+          //  Alert.alert('Modal has been closed.');
+          //}}
+        >
           <TouchableOpacity
             activeOpacity={1}
             style={[styles.centeredView]}
             onPress={(event) => {
               console.log('おや');
               setModalVisible(false);
-            }}>
-            <View style={[styles.modalView]}>
-              <Text>sample</Text>
-              <Image
-                source={require('./assets/img/kaisya_woman_bad.png')}
-                style={{
-                  width: width * 0.4,
-                  height: 200,
-                  //borderWidth: 1,
-                  borderColor: '#000000',
-                }}
-                resizeMode="contain"
-              />
-              <Button
-                title="閉じる"
-                onPress={() => {
-                  console.log('こ');
-                  setModalVisible(false);
-                }}
-              />
-            </View>
-          </TouchableOpacity>
+            }}></TouchableOpacity>
+          <View style={[styles.modalView]}>
+            <Text>sample</Text>
+            <Image
+              source={require('./assets/img/kaisya_woman_bad.png')}
+              style={{
+                width: width * 0.4,
+                height: 200,
+                //borderWidth: 1,
+                borderColor: '#000000',
+              }}
+              resizeMode="contain"
+            />
+            <Button
+              title="閉じる"
+              onPress={() => {
+                console.log('こ');
+                setModalVisible(false);
+              }}
+            />
+          </View>
         </Modal>
       </SafeAreaView>
     </>
@@ -88,8 +88,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //marginTop: 22,
     backgroundColor: '#CCC',
+    opacity: 0.7,
   },
   modalView: {
+    position: 'absolute',
+    alignSelf: 'center',
+    top: height / 5,
     margin: 20,
     backgroundColor: 'white',
     borderRadius: 20,
