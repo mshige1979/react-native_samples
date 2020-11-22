@@ -4,6 +4,6 @@
 ## youtube
 https://www.youtube.com/watch?v=nJJm5qwi_FY
 
-## github
-https://github.com/mshige1979/react-native_samples/tree/main/sampleApp16
+## blog
+後で描くかも
 
