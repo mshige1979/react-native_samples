@@ -55,8 +55,8 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 12 | [sampleApp12](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp12) | ログイン画面 | OK |
 | 13 | [sampleApp13](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp13) | 画面引っぱってロードするやつ | OK |
 | 14 | [sampleApp14](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp14) | モーダル画面 | OK |
-| 15 | [sampleApp14](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp15) | state値でstyleの位置を変化させる | OK |
-| 16 | [sampleApp14](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp16) | アニメーションサンプル| OK |
+| 15 | [sampleApp15](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp15) | state値でstyleの位置を変化させる | OK |
+| 16 | [sampleApp16](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp16) | アニメーションサンプル| OK |
 | - | sampleAppNN | (未作成)スプラッシュ画面| |
 
 ## 外部ライブラリ関連
