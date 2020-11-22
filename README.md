@@ -59,24 +59,6 @@ Bundle Idenifierにdeveloperアカウントを選択（apple developer account�
 | 16 | [sampleApp16](https://github.com/mshige1979/react-native_samples/tree/main/sampleApp16) | アニメーションサンプル| OK |
 | - | sampleAppNN | (未作成)スプラッシュ画面| |
 
-## 外部ライブラリ関連
-| No | App名 | 説明 |
-| :--: | :- | :-- |
-| 1 | sampleLib01 | (未作成)AsyncStorageの動作確認|
-| 2 | sampleLib02 | (未作成)axiosを利用してAPIと通信|
-| 3 | sampleLib03 | (未作成)React Navigation(Stack)|
-| 4 | sampleLib04 | (未作成)React Navigation(Tab)|
-| 5 | sampleLib05 | (未作成)React Navigation(Tab+Stack)|
-| 6 | sampleLib06 | (未作成)React Navigation(Drawer)|
-| 7 | sampleLib07 | (未作成)React Navigation(Drawer)レイアウトカスタマイズ|
-| 8 | sampleLib08 | (未作成)React Navigation(Tab+Stack+Drawer)|
-| 9 | sampleLib09 | (未作成)Google maps|
-| 10 | sampleLib10 | (未作成)Google maps(marker v1)|
-| 11 | sampleLib11 | (未作成)Google maps(marker v2)独自マーカー作成|
-| 12 | sampleLib12 | (未作成)Google maps(marker v3)独自吹き出し作成|
-| 13 | sampleLib13 | (未作成)react-native-snap-carousel|
-| 14 | sampleLib14 | (未作成)スマホの向きを固定|
-
 ## デモアプリ集
 | No | App名 | 説明 |
 | :--: | :- | :-- |
