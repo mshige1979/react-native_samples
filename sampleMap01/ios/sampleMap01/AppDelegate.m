@@ -13,6 +13,7 @@
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 
 #import "ReactNativeConfig.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -33,7 +34,8 @@ static void InitializeFlipper(UIApplication *application) {
   InitializeFlipper(application);
 #endif
 
-  NSString *apiUrl = [ReactNativeConfig envFor:@"AAA"];
+  NSString *googleMapApiKey = [ReactNativeConfig envFor:@"GOOGLE_MAP_API_IOS"];
+  [GMSServices provideAPIKey:googleMapApiKey];
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
