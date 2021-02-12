@@ -21,6 +21,7 @@ target 'sampleMap01' do
   post_install do |installer|
     flipper_post_install(installer)
   end
+  
 end
 
 target 'sampleMap01-tvOS' do
@@ -31,3 +32,9 @@ target 'sampleMap01-tvOS' do
     # Pods for testing
   end
 end
+
+# react-native-maps対応
+rn_maps_path = '../node_modules/react-native-maps'
+pod 'react-native-google-maps', :path => rn_maps_path
+pod 'GoogleMaps'
+pod 'Google-Maps-iOS-Utils'

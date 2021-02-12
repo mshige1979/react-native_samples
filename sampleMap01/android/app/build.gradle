@@ -1,6 +1,15 @@
 apply plugin: "com.android.application"
 
+project.ext.envConfigFiles = [
+    debug: ".env",
+    staging: ".env.stg",
+    release: ".env.prd",
+    anycustombuildlowercase: ".env",
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 import com.android.build.OutputFile
+
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -134,6 +143,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -186,6 +197,12 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
+    // react-native-maps追加
+    implementation project(':react-native-maps')
+
+    // react-native-config追加
+    implementation project(':react-native-config')
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
