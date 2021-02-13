@@ -40,6 +40,8 @@ const DEFAULT_POSITION = {
 
 const App = () => {
   const [region, setRegion] = useState(DEFAULT_POSITION);
+  const [position, setPosition] = useState(DEFAULT_POSITION);
+  const [regionMove, setRegionMove] = useState(true);
   const markerRef = useRef();
   const mapRef = useRef();
 
@@ -104,6 +106,7 @@ const App = () => {
   };
 
   const setMyLocation = (_region) => {
+    setPosition(_region);
     setRegion(_region);
     mapRef.current.animateToRegion(_region);
   };
@@ -168,6 +171,23 @@ const App = () => {
     return result;
   };
 
+  const zoomIn = () => {
+    setRegion({
+      latitude: region.latitude,
+      longitude: region.longitude,
+      latitudeDelta: region.latitudeDelta / 5,
+      longitudeDelta: region.longitudeDelta / 5,
+    });
+  };
+  const zoomOut = () => {
+    setRegion({
+      latitude: region.latitude,
+      longitude: region.longitude,
+      latitudeDelta: region.latitudeDelta * 5,
+      longitudeDelta: region.longitudeDelta * 5,
+    });
+  };
+
   return (
     <View style={styles.container}>
       <MapView
@@ -182,32 +202,89 @@ const App = () => {
         //showsUserLocation={true}
         //showsMyLocationButton={true}
         compassOffset={{x: 50, y: 50}}
-        //initialRegion={DEFAULT_POSITION}
-        region={region}>
-        <Marker ref={markerRef} coordinate={region}>
+        initialRegion={DEFAULT_POSITION}
+        zoomEnabled={true}
+        zoomControlEnabled={true}
+        region={region}
+        onRegionChangeComplete={(_region) => {
+          // イベント検知による変化は一定の間隔をおく
+          if (regionMove === false) {
+            return;
+          }
+
+          const latitude1 = Number(region.latitude.toFixed(6));
+          const longitude1 = Number(region.longitude.toFixed(6));
+          const latitude2 = Number(_region.latitude.toFixed(6));
+          const longitude2 = Number(_region.longitude.toFixed(6));
+
+          console.log(`前 latitude1: ${latitude1}, longitude1: ${longitude1}`);
+          console.log(`後 latitude2: ${latitude2}, longitude2: ${longitude2}`);
+
+          if (latitude1 !== latitude2 || longitude1 !== longitude2) {
+            setRegionMove(false);
+            setRegion({
+              latitude: latitude2,
+              longitude: longitude2,
+              latitudeDelta: _region.latitudeDelta,
+              longitudeDelta: _region.longitudeDelta,
+            });
+            setTimeout(() => {
+              setRegionMove(true);
+            }, 500);
+          }
+        }}>
+        <Marker ref={markerRef} coordinate={position} tracksViewChanges={false}>
           <Icon name="my-location" size={24} color={'#3366FF'} />
         </Marker>
       </MapView>
 
       <TouchableOpacity
-        style={{
-          position: 'absolute',
-          top: Platform.select({
-            ios: 50,
-            android: 10,
-          }),
-          left: 10,
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#FFFFFF',
-          width: 48,
-          height: 48,
-          borderRadius: 48 / 2,
-        }}
+        style={[
+          styles.location,
+          {
+            position: 'absolute',
+            top: Platform.select({
+              ios: 50,
+              android: 10,
+            }),
+            left: 10,
+          },
+        ]}
         onPress={() => {
           getLocation();
         }}>
         <Icon name="location" size={24} color="#000000" />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={[
+          styles.zoom,
+          {
+            position: 'absolute',
+            top: Platform.select({
+              ios: 110,
+              android: 70,
+            }),
+            left: 10,
+          },
+        ]}
+        onPress={zoomIn}>
+        <Icon name="plus" size={24} color="#000000" />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[
+          styles.zoom,
+          {
+            position: 'absolute',
+            top: Platform.select({
+              ios: 170,
+              android: 130,
+            }),
+            left: 10,
+          },
+        ]}
+        onPress={zoomOut}>
+        <Icon name="minus" size={24} color="#000000" />
       </TouchableOpacity>
     </View>
   );
@@ -216,6 +293,21 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  location: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
+    width: 48,
+    height: 48,
+    borderRadius: 48 / 2,
+  },
+  zoom: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFFFBB',
+    width: 48,
+    height: 48,
   },
 });
 

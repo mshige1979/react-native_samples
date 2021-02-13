@@ -14,6 +14,8 @@ const Icon = (props) => {
     'my-location': (
       <MaterialIcons name="my-location" size={size} color={color} />
     ),
+    plus: <FontAwesome name="plus" size={size} color={color} />,
+    minus: <FontAwesome name="minus" size={size} color={color} />,
   };
 
   return <>{iconList[name]}</>;
