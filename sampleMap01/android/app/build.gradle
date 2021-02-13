@@ -145,6 +145,11 @@ android {
         versionName "1.0"
 
         multiDexEnabled true
+
+        manifestPlaceholders = [
+            // google map apiキー
+            GOOGLE_MAPS_API_KEY: project.env.get("GOOGLE_MAP_API_ANDROID")
+        ]
     }
     splits {
         abi {
@@ -204,6 +209,9 @@ dependencies {
     // react-native-config追加
     implementation project(':react-native-config')
 
+    // react-native-vector-icons追加
+    implementation project(':react-native-vector-icons')
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
@@ -232,5 +240,8 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+// react-native-vector-icons
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle" // add this line
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
