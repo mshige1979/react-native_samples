@@ -60,5 +60,5 @@ buck-out/
 /ios/Pods/
 
 # ビルド
-/android/app/src/main/assets
+/android/app/src/main/assets/*
 !.gitkeep
