@@ -19,6 +19,7 @@ const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
+      <Text>MODE: {Config.MODE}</Text>
       <Text>APP_NAME: {Config.APP_NAME}</Text>
       <Text>VERSION: {Config.VERSION}</Text>
     </View>

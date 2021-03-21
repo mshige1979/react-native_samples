@@ -4,7 +4,13 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android_dev": "ENVFILE=.env yarn android",
+    "android_stg": "ENVFILE=.env.staging yarn android",
+    "android_prd": "ENVFILE=.env.production yarn android",
     "ios": "react-native run-ios",
+    "ios_dev": "echo '.env' > /tmp/envfile && yarn ios",
+    "ios_stg": "echo '.env.staging' > /tmp/envfile && yarn ios",
+    "ios_prd": "echo '.env.production' > /tmp/envfile && yarn ios",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint ."
