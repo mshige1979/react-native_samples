@@ -8,113 +8,82 @@
  * @format
  */
 
-import React, {type PropsWithChildren} from 'react';
+import React, {useEffect, type PropsWithChildren} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
-  StatusBar,
+  PermissionsAndroid,
+  Platform,
   StyleSheet,
   Text,
-  useColorScheme,
+  Button,
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section: React.FC<
-  PropsWithChildren<{
-    title: string;
-  }>
-> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import GPSState from 'react-native-gps-state';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  // 位置情報の権限の有無をチェックし、存在しない場合は取得する
+  const hasLocationPermission = async () => {
+    let result = false;
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    // androidチェック
+    if (Platform.OS === 'android') {
+      // androidの位置情報のステータスを取得
+      const gpsState = await GPSState.getStatus();
+      console.log(`gpsState: ${gpsState}`);
+
+      if (gpsState > 1) {
+        if (Platform.Version < 23) {
+          console.log(`android sdk  version < 23`);
+          return true;
+        }
+        const status = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        );
+        console.log(`status: ${status}`);
+
+        // 許可
+        if (status === PermissionsAndroid.RESULTS.GRANTED) {
+          result = true;
+        }
+
+        // 未許可
+        if (status === PermissionsAndroid.RESULTS.DENIED) {
+          // 許可しない
+          result = false;
+        } else if (status === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN) {
+          // 許可しない（次回から表示しない）
+          result = false;
+        }
+      } else {
+        // システム全体で無効化
+        result = false;
+      }
+
+      return result;
+    }
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+    <SafeAreaView>
+      <View
+        style={{
+          padding: 10,
+        }}>
+        <Text>下のボタンを押下したらGPS権限取得する</Text>
+        <View>
+          <Button
+            title="位置情報の権限チェック"
+            onPress={() => {
+              hasLocationPermission();
+            }}
+          />
         </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+const styles = StyleSheet.create({});
 
 export default App;
