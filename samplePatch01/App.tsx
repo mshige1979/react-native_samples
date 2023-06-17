@@ -40,7 +40,49 @@ const App = () => {
         const status = await PermissionsAndroid.request(
           PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
         );
-        console.log(`status: ${status}`);
+        console.log(`hasLocationPermission status: ${status}`);
+
+        // 許可
+        if (status === PermissionsAndroid.RESULTS.GRANTED) {
+          result = true;
+        }
+
+        // 未許可
+        if (status === PermissionsAndroid.RESULTS.DENIED) {
+          // 許可しない
+          result = false;
+        } else if (status === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN) {
+          // 許可しない（次回から表示しない）
+          result = false;
+        }
+      } else {
+        // システム全体で無効化
+        result = false;
+      }
+
+      return result;
+    }
+  };
+
+  // 通知の権限の有無をチェックし、存在しない場合は取得する
+  const hasNotificationPermission = async () => {
+    let result = false;
+
+    // androidチェック
+    if (Platform.OS === 'android') {
+      // androidの位置情報のステータスを取得
+      const gpsState = await GPSState.getStatus();
+      console.log(`gpsState: ${gpsState}`);
+
+      if (gpsState > 1) {
+        if (Platform.Version < 32) {
+          console.log(`android sdk  version < 32`);
+          return true;
+        }
+        const status = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
+        );
+        console.log(`hasNotificationPermission status: ${status}`);
 
         // 許可
         if (status === PermissionsAndroid.RESULTS.GRANTED) {
@@ -76,6 +118,12 @@ const App = () => {
             title="位置情報の権限チェック"
             onPress={() => {
               hasLocationPermission();
+            }}
+          />
+          <Button
+            title="通知の権限チェック"
+            onPress={() => {
+              hasNotificationPermission();
             }}
           />
         </View>

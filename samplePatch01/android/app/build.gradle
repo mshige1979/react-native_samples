@@ -134,6 +134,11 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    packagingOptions {
+        pickFirst '**/*.so'
+    }
+
+
     defaultConfig {
         applicationId "com.samplepatch01"
         minSdkVersion rootProject.ext.minSdkVersion

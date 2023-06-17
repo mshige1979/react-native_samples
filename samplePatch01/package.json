@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "react": "18.1.0",
-    "react-native": "0.70.6",
+    "react-native": "0.70.7",
     "react-native-geolocation-service": "^5.3.1",
     "react-native-gps-state": "^2.0.3",
     "types": "^0.1.1"
