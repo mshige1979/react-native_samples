@@ -9,3 +9,7 @@ if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true")
     include(":ReactAndroid:hermes-engine")
     project(":ReactAndroid:hermes-engine").projectDir = file('../node_modules/react-native/ReactAndroid/hermes-engine')
 }
+
+// react-native-gps-state
+include ':react-native-gps-state'
+project(':react-native-gps-state').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gps-state/android')
