@@ -70,35 +70,22 @@ const App = () => {
 
     // androidチェック
     if (Platform.OS === 'android') {
-      // androidの位置情報のステータスを取得
-      const gpsState = await GPSState.getStatus();
-      console.log(`gpsState: ${gpsState}`);
+      const status = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
+      );
+      console.log(`hasNotificationPermission status: ${status}`);
 
-      if (gpsState > 1) {
-        if (Platform.Version < 32) {
-          console.log(`android sdk  version < 32`);
-          return true;
-        }
-        const status = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
-        );
-        console.log(`hasNotificationPermission status: ${status}`);
+      // 許可
+      if (status === PermissionsAndroid.RESULTS.GRANTED) {
+        result = true;
+      }
 
-        // 許可
-        if (status === PermissionsAndroid.RESULTS.GRANTED) {
-          result = true;
-        }
-
-        // 未許可
-        if (status === PermissionsAndroid.RESULTS.DENIED) {
-          // 許可しない
-          result = false;
-        } else if (status === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN) {
-          // 許可しない（次回から表示しない）
-          result = false;
-        }
-      } else {
-        // システム全体で無効化
+      // 未許可
+      if (status === PermissionsAndroid.RESULTS.DENIED) {
+        // 許可しない
+        result = false;
+      } else if (status === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN) {
+        // 許可しない（次回から表示しない）
         result = false;
       }
 
