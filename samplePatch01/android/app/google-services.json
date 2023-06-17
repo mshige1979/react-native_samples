@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1018789690493",
+    "firebase_url": "https://aaaaaa-5a7d2.firebaseio.com",
+    "project_id": "aaaaaa-5a7d2",
+    "storage_bucket": "aaaaaa-5a7d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018789690493:android:d06f4cf2b92428b5e78514",
+        "android_client_info": {
+          "package_name": "net.mshige1979.com.samplepatch01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018789690493-lfne7365jb0afkrqimnaakrtr5vlvk69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi3kvkoXeO18yPUuW48TrXTvTup1mJDPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018789690493-lfne7365jb0afkrqimnaakrtr5vlvk69.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1018789690493-5cqfsho2561li94mdg27g5qn6mjll2je.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pushsampleapp.reactnative.mshige1979"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018789690493:android:c451645f6bbb33f8e78514",
+        "android_client_info": {
+          "package_name": "pushsampleapp.reactnative.mshige1979"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018789690493-lfne7365jb0afkrqimnaakrtr5vlvk69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi3kvkoXeO18yPUuW48TrXTvTup1mJDPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018789690493-lfne7365jb0afkrqimnaakrtr5vlvk69.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1018789690493-5cqfsho2561li94mdg27g5qn6mjll2je.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pushsampleapp.reactnative.mshige1979"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

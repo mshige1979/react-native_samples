@@ -140,7 +140,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.samplepatch01"
+        applicationId "net.mshige1979.com.samplepatch01"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -263,6 +263,10 @@ dependencies {
 
     // add
     implementation project(':react-native-gps-state')
+    // add notice
+    implementation project(':react-native-push-notification')
+    implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    implementation 'com.google.firebase:firebase-analytics'
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
@@ -319,3 +323,6 @@ def isNewArchitectureEnabled() {
     // - Set an environment variable `ORG_GRADLE_PROJECT_newArchEnabled=true`
     return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
 }
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'

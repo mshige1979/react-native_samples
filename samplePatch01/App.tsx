@@ -20,8 +20,15 @@ import {
 } from 'react-native';
 
 import GPSState from 'react-native-gps-state';
+import PushNotice, {
+  PushNotificationOptions,
+  PushNotificationScheduleObject,
+} from 'react-native-push-notification';
+import PushNotificationIOS from '@react-native-community/push-notification-ios';
 
 const App = () => {
+  useEffect(() => {}, []);
+
   // 位置情報の権限の有無をチェックし、存在しない場合は取得する
   const hasLocationPermission = async () => {
     let result = false;
@@ -111,6 +118,72 @@ const App = () => {
             title="通知の権限チェック"
             onPress={() => {
               hasNotificationPermission();
+            }}
+          />
+          <Button
+            title="通知初期化"
+            onPress={() => {
+              setTimeout(() => {
+                // 初期設定
+                const options: PushNotificationOptions = {
+                  onRegister: () => {
+                    // TODO: そのうち
+                    console.log('onRegister');
+                  },
+                  onRegistrationError: (err: any) => {
+                    console.log('onRegistrationError: ', err);
+                  },
+                  onAction: (notification: any) => {
+                    console.log('onAction:', notification);
+                  },
+                  onNotification: (notification: any) => {
+                    console.log('onNotification:', notification);
+                    // required on iOS only (see fetchCompletionHandler docs: https://facebook.github.io/react-native/docs/pushnotificationios.html)
+                    notification.finish(PushNotificationIOS.FetchResult.NoData);
+                  },
+
+                  // iOS用パラメータ
+                  permissions: {
+                    alert: true,
+                    badge: true,
+                    sound: true,
+                  },
+                  //invokeApp: true,
+                  popInitialNotification: true,
+                  requestPermissions: Platform.OS === 'ios',
+                };
+                PushNotice.configure(options);
+
+                // iOSは設定不要
+                if (Platform.OS === 'ios') {
+                  return;
+                }
+
+                // channel登録
+                PushNotice.createChannel(
+                  {
+                    channelId: 'mshige1979-hogehoge-push', // (required)
+                    channelName: 'My channel', // (required)
+                    channelDescription:
+                      'A channel to categorise your notifications', // (optional) default: undefined.
+                    soundName: 'default', // (optional) See `soundName` parameter of `localNotification` function
+                    importance: 4, // (optional) default: 4. Int value of the Android notification importance
+                    vibrate: true, // (optional) default: true. Creates the default vibration patten if true.
+                  },
+                  created => console.log(`createChannel returned '${created}'`), // (optional) callback returns whether the channel was created, false means it already existed.
+                );
+              }, 1000);
+            }}
+          />
+          <Button
+            title="ローカルプッシュ"
+            onPress={() => {
+              PushNotice.localNotification({
+                channelId: 'mshige1979-hogehoge-push', // (required)
+                id: '1',
+                title: 'title',
+                message: 'message',
+              });
             }}
           />
         </View>

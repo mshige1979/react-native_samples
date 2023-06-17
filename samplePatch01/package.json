@@ -11,10 +11,13 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@react-native-community/push-notification-ios": "^1.11.0",
+    "@types/react-native-push-notification": "^8.1.1",
     "react": "18.1.0",
     "react-native": "0.70.7",
     "react-native-geolocation-service": "^5.3.1",
     "react-native-gps-state": "^2.0.3",
+    "react-native-push-notification": "^8.1.1",
     "types": "^0.1.1"
   },
   "devDependencies": {

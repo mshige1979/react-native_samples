@@ -13,3 +13,7 @@ if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true")
 // react-native-gps-state
 include ':react-native-gps-state'
 project(':react-native-gps-state').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gps-state/android')
+
+// react-native-push-notification
+include ':react-native-push-notification'
+project(':react-native-push-notification').projectDir = file('../node_modules/react-native-push-notification/android')
